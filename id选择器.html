@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="sp1">1xxxx</span>
+    <span id="foo:bar">2foo:bar</span>
+    <span id="foo[bar]">3foo[bar]</span>
+    <span id="foo.bar">4foo.bar</span>
+    <!-- 引入jQuery -->
+    <script src="lib/jquery.js"></script>
+    <script>
+        $('#sp1').css('backgroundColor','yellow');
+        //若果选择器命名时 有特殊字符如 ！@#￥%&*——+《》？：“{}|~
+        //在字符前面加上两个反斜杠 \\ 转义
+        $('#foo\\:bar').css('backgroundColor','red');
+        $('#foo\\[bar\\]').css('backgroundColor','skyblue');  
+    </script>
+</body>
+</html>

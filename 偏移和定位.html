@@ -1,0 +1,99 @@
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+   div.box{
+       width: 650px;
+       margin: 0  auto;
+   }
+    div.box div {
+        width: 600px;
+        height: 400px;
+
+    }
+
+    div.box div:nth-child(1) {
+        background-color: skyblue;
+    }
+
+    div.box div:nth-child(2) {
+        background-color: orange;
+    }
+
+    div.box div:nth-child(3) {
+        background-color: green;
+    }
+    div.box div:nth-child(4) {
+        background-color: pink;
+    }
+    div.box div:nth-child(5) {
+        background-color: purple;
+    }
+    .btns{
+        width: 30px;
+        position: fixed;
+        border: 1px solid red;
+        top: 50%;
+        left: 40px;
+        transform: translateY(-50%);
+    }
+</style>
+<div class="btns">
+
+    <button id="btn1">1楼</button>
+    <button id="btn2">2楼</button>
+    <button id="btn3">3楼</button>
+    <button id="btn4">4楼</button>
+</div>
+<div style="height: 500px;"></div>
+<div class="box">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div class="box4">4</div>
+    <div>5</div>
+
+    <div>6</div>
+    <div>7</div>
+</div>
+<script src="lib/jquery.js"></script>
+<script>
+/**
+ * 需求:
+ *    当点击按钮时，让右边对应的盒子显示在浏览器窗口的顶部
+ *    对象.offset() {left,top}
+ *   获取到与当前按钮对应的那个盒子的顶部偏移值，再 赋给页面卷动距离  
+ * 
+ * */ 
+$("#btn1").click(function(){
+    let targetBox = $(".box div").eq($(this).index());
+    // console.log(targetBox.offset());{top: 400, left: 127}
+    //把获取到的偏移值赋给页面卷动距离
+      let top=targetBox.offset().top
+    // // document.documentElement.scrollTop = 300
+    // document.body.scrollTop = 300
+    $("html,body").scrollTop( top);
+})
+$("#btn2").click(function(){
+    let targetBox = $(".box div").eq($(this).index());
+    // console.log(targetBox.offset());{top: 400, left: 127}
+    //把获取到的偏移值赋给页面卷动距离
+      let top=targetBox.offset().top
+    // // document.documentElement.scrollTop = 300
+    // document.body.scrollTop = 300
+    $("html,body").scrollTop( top);
+})
+$("#btn3").click(function(){
+    let targetBox = $(".box div").eq($(this).index());
+    // console.log(targetBox.offset());{top: 400, left: 127}
+    //把获取到的偏移值赋给页面卷动距离
+      let top=targetBox.offset().top
+    // // document.documentElement.scrollTop = 300
+    // document.body.scrollTop = 300
+    // $("html,body").scrollTop( top);
+    $("html,body").animate({scrollTop:top},500)
+})
+
+</script>

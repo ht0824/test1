@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>John Resig</div>
+    <div>George Martin</div>
+    <div>Malcom John Sinclair</div>
+    <div>J. Ohn</div>
+    <div> <span>sp</span></div>
+
+    
+    <table>
+        <tr><td>Value 1</td><td>
+            
+        </td></tr>
+        <tr><td>Value 2</td><td></td></tr>
+      </table>
+
+
+    <script src="lib/jquery.js"></script>
+    <script>
+        //选择中包含有John的div标签
+    console.log(  $("div:contains(John)")  );
+    
+    //选择中含有span标签的div
+    console.log( $("div:has(span)") );
+
+    //选择中没有内容的标签 ，内容：文本，子元素 空格 换行
+    console.log( $("td:empty") );
+    
+    </script>
+</body>
+
+</html>

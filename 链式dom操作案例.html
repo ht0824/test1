@@ -1,0 +1,23 @@
+<div class="box" style="width: 100;height:100;background-color:pink;"></div>
+
+<script src="lib/jquery.js"></script>
+<script>
+    //A.b().c().d()  最后一个方法依赖的对象是由最近一个方法决定 的 
+    //避免重复去获取元素，提高效率
+    // $(".box").html("我是一个盒子")
+    // .css("color","red")
+    // .prop("title","哈哈")
+    // .css("backgroundColor","orange")
+    // .css("height",300)
+    // .css("width",200)
+    $(".box").click(function () {
+        console.log(1);
+    }).mouseenter(function () {
+        console.log(2);
+
+    }).mouseleave(function () {
+        console.log(3);
+    })
+//  console.log(re);
+
+</script>

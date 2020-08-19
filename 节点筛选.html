@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="yeye">
+        <p>p儿子</p>
+        <div id="box">
+            <p>这是段落1</p>
+            <p class="a">这是段落2a</p>
+            <p class="b">这是段落3b</p>
+            <span>这是行内元素1</span>
+            <span>这是行内元素2</span>
+            <span>这是行内元素3</span>
+            <h3 class="a">这是标题1a</h3>
+            <h3>这是标题2</h3>
+            <h3>这是标题3</h3>
+            <a href="#">这是链接1</a>
+            <a href="#">这是链接2</a>
+            <a href="#">这是链接3</a>
+        </div>
+    </div>
+    <script src="lib/jquery.js"></script>
+    <script>
+    //获取所有子节点
+    // let cd=$("#box").children().css("background","pink");
+    // let cd=$("#box").children("h3").css("background","pink");
+    // let cd=$("#box").children("h3,a").css("background","pink");
+    // let cd=$("#box").children(".a").css("background","pink");
+    //选中.b标签后面第一个元素
+    //  $("#box .b").next().css("background","pink");
+    // 获取后面所有兄弟节点
+    //  $("#box .b").nextAll().css("background","pink");
+    //  $("#box .b").nextAll("a").css("background","pink");
+    // 获取后面所有兄弟节点直到a为止
+    //  $("#box .b").nextUntil("a").css("background","pink");
+    // 获取前后的兄弟的节点
+    //  $("#box .b").siblings().css("background","pink");
+    //  $("#box .b").siblings("h3").css("background","pink");
+
+    // closest("选择器"):向上查找父辈节点
+    //  $("#box .b").closest("#box").css("border","1px solid red");
+    //  $("#box .b").closest(".yeye").css("border","1px solid red");
+    // parents("选择器"):向上查找父辈节点
+    //  $("#box .b").parents(".yeye").css("border","1px solid red");
+    //  $("#box .b").parent().parent().css("border","1px solid red");
+    // 向下查找后代元素   jq对象.find('后代选择器')
+    //   $(".yeye").find("p").css("background","pink");;
+      $(".yeye").find(".a").css("background","pink");;
+      
+        /**
+    children():
+        jq对象.children() : 获取所有子节点
+        jq对象.children('选择器1,选择器2') : 获取所有指定的子节点
+    next()
+        jq对象.next() : 获取后面第一个兄弟节点
+        jq对象.nextAll() : 获取后面所有兄弟节点
+        jq对象.nextUntil() : 获取后面所有兄弟节点直到什么为止
+    prev()
+        jq对象.prev() : 获取前面第一个兄弟节点
+        jq对象.prevAll() : 获取前面所有兄弟节点
+        jq对象.prevUntil() : 获取前面所有兄弟节点直到什么为止
+    siblings()
+        jq对象.siblings() : 获取前后的兄弟的节点
+    向上向下查找元素对象
+        向上： 向上查找父辈元素   jq对象.closest('父辈选择器')
+        向下： 向下查找后代元素   jq对象.find('后代选择器')
+         *
+        */
+    </script>
+</body>
+
+</html>

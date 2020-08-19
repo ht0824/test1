@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 加载时间
+        // 等到页面上的html-dom，图片 音 频  视频等外部资源加载完毕之后才执行
+        // 不能书写多个事件
+        // 后者会覆盖前者
+        
+        window.onload=function(){
+            let box = document.querySelector('.box');
+            console.log(box);
+        }
+
+        window.onload=function(){
+            console.log('第二个window事件');
+        }
+    </script>
+</head>
+<body>
+    <div class="box">
+        今天天气真好
+    </div>
+</body>
+</html>

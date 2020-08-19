@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="btn" value="点我啊">
+    <input type="text" id="txt" value="哈哈哈我是默认值">
+    
+    <script src="lib/jquery.js"></script>
+
+    <script>
+    $("#btn").click(function(){
+
+        //不能使用jQuery对象来调用原生对象的属性
+        // $("#txt").value = "xixixi";
+
+        //设置文本框中的值
+        $("#txt").val("xixixi");
+
+        //获取文本框中的值
+        let txt =  $("#txt").val()
+        console.log(txt);
+        
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<style>
+    div {
+        width: 320px;
+        border: 1px solid red;
+    }
+</style>
+<button>克隆元素</button>
+
+<div id="box1">
+    <p>这是锻炼</p>
+   
+</div>
+
+<div id="box2"style="border-color:blue;">
+
+</div>
+<script src="lib/jquery.js"></script>
+
+<script>
+/**
+ *  jq对象.clone() : 复制节点，不复制行为
+    jq对象.clone(true) : 复制节点，复制行为
+*/
+//在p标签身上添加事件
+$("#box1 p").click(function(){
+    alert(1);
+})
+//点击事件
+$("button").click(function(){
+ 
+    //不复制事件
+    // let node = $("#box1 p").clone();
+    //复制节点同时复制事件
+    let node = $("#box1 p").clone(true);
+       node.appendTo("#box2")
+    
+})
+</script>

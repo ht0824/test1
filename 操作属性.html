@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box" id="hahabox" title="盒子" age="22" color="red">div</div>
+
+
+    <script src="lib/jquery.js"></script>
+    <script>
+        //1 操作自定义属性
+        //1.1 获取自定义属性
+        //   console.log(  $("div").attr("age") );
+        //   console.log(  $("div").attr("color") );
+        //1.2 设置自定义属性
+        // $("div").attr("age","18"); 
+        // $("div").attr("color","yellow"); 
+        // $("div").attr({ 
+        //     age:"108",
+        //     color:"blue"
+
+        // })
+        //2 操作标准属性
+        //2.1 获取标准属性
+        // 获取操作一次只能获取一个属性的值，不能同时获取多个属性的值。
+        // console.log( $("div").prop("id" )  );
+        // console.log( $("div").prop("title" )  );
+        // console.log( $("div").prop("class" )  );
+        //2.2 设置标准属性
+        //不要改id属性
+        //  $("#hahabox").prop("id","xixi");
+        //  $("#hahabox").prop("title","新的title" )
+        //  $("#hahabox").prop("class","hezi" )
+        $("#hahabox").prop({
+            "class": "hezi222",
+            "title": "hehehe"
+        })
+    </script>
+</body>
+
+</html>

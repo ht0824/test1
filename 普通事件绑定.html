@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+
+    <script src="lib/jquery.js"></script>
+    <script>
+        //1 普通事件绑定 可以绑定多个同名事件
+        //   $(".box").on("click",function(){
+        //       console.log(1);          
+        //   })
+        //简写:
+        //   $(".box").click( function(){
+        //       console.log(2);          
+        //   })
+        //   $(".box").click( function(){
+        //       console.log(3);          
+        //   })
+        //多个事件使用同一个事件处理函数
+        //  $(".box").on("mouseenter mouseleave ",fn);
+        //  $(".box").on("mouseenter click ",fn);
+        //  function fn(){      
+        //     console.log( "第二种写法");     
+        //  }
+        //  $(".box").mouseenter(fn).click(fn)
+        //每个事件使用独立的事件处理函数
+        // $(".box").on(
+        //     {    //绑定点击事件
+        //         "click": function () {
+        //             console.log("我是点击事件");
+        //         },
+        //         mouseenter:function(){
+        //             $(this).css("background","yellow");
+        //         },
+        //         mouseleave:function(){
+        //             $(this).css("background","green");
+        //         },                
+        //     }
+        // )
+        $(".box").click(
+            function(){
+                console.log("我是点击事件");
+            }
+        ).mouseenter(
+            function(){
+                $(this).css("background","yellow");
+            }
+        ).mouseleave(
+            function(){
+                $(this).css("background","pink");
+            }
+        )
+    </script>
+</body>
+
+</html>

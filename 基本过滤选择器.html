@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+    </div>
+    <div>
+        <p>11</p>
+        <p>22</p>
+        <p>33</p>
+        <p>44</p>
+    </div>
+    <!-- 引入jQuery -->
+    <script src="lib/jquery.js"></script>
+    <script>
+    /**
+     * 过滤选择器:
+     * 从集合中筛选出需要的标签 
+     * */ 
+    //1 选择中所有div中的p标签 
+    // $("div p ").css("background","skyblue")
+
+    //2 从所有的div中的p组成的集合中选中第一个p
+    // $("div p:first").css("background","skyblue")
+
+    //3 从所有的div中的p组成的集合中选中最后一个p
+    // $("div p:last").css("background","skyblue")
+
+    ///4 从所有的div中的p组成的集合中选中索引为2的p标签
+    // $("div p:eq(2)").css("background","skyblue")
+
+    ///5 从所有的div中的p组成的集合中选中偶数个p标签,索引从0开始    
+    // $("div p:even").css("background","skyblue")
+
+    ///6 从所有的div中的p组成的集合中选中奇数个p标签,索引从0开始    
+    // $("div p:odd").css("background","orange")
+
+    ///7 从所有的div中的p组成的集合中选中索引大于1的p标签,索引从0开始    
+    // $("div p:gt(1)").css("background","orange")
+
+    ///8 从所有的div中的p组成的集合中选中索引小于3的p标签,索引从0开始    
+    $("div p:lt(3)").css("background","orange")
+    
+    </script>
+</body>
+</html>

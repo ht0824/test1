@@ -1,0 +1,37 @@
+<!--
+    对应关系： 
+    结构相同的两个集合，它们的子元素的索引是一一对应的。
+    jQuery中提供了一个方法 index()可以求出元素的索引
+ -->
+ <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+<div class="box">
+
+    <div>11</div>
+    <div>22</div>
+    <div>33</div>
+    <div>44</div>
+    <div>55</div>
+</div>
+<script src="lib/jquery.js"></script>
+<script>
+    /**
+     * 点击li标签输出自己的索引
+     * */ 
+    $("ul li").click(function(){
+        //  console.log( $(this).index()  );        
+        let index = $(this).index();
+        //取出对应div的内容
+        let txt = $(".box div").eq( index).text();
+        console.log(txt);
+        
+    })
+    // $(".box div").click(function(){
+    //      console.log( $(this).index()  );        
+    // })
+</script>

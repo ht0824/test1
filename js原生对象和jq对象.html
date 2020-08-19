@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box1" title="原生对象">xxx</div>
+    <div id="box2" title="jQuery对象">yyy</div>
+    <!-- 引入jQuery文件 -->
+    <script src="lib/jquery.js"></script>
+    <script>
+        //获得第一个盒子
+        let box1 = document.getElementById('box1');
+        console.log(box1);
+        console.dir(box1);
+
+        //调用js原生对象
+        console.log((box1.title)); 
+        
+        //原生对象转 jq 对象  $(原生对象)
+
+        // 调用jq对象
+        console.log($(box1).prop('title'));
+
+       
+    </script>
+</body>
+</html>

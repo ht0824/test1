@@ -1,0 +1,44 @@
+<style>
+    div {
+        width: 320px;
+        border: 1px solid red;
+    }
+</style>
+<button>删除元素</button>
+
+<div id="box1">
+    <p>这是锻炼</p>
+   
+</div>
+
+<div id="box2"style="border-color:blue;">
+
+</div>
+<script src="lib/jquery.js"></script>
+
+<script>
+/**
+ *1 删除所有子节点： jq对象.empty()
+  2 删除自身： jq对象.remove()  或者 jq对象.detach();
+
+    remove() : 返回被删除的元素， 删除的元素不保留行为(事件)
+    detach() : 返回被删除的元素， 删除的元素保留行为(事件)
+ * 
+*/
+// 删除所有子节点： jq对象.empty()
+// $("button").click(function(){
+//     $("#box1").empty()
+// })
+//在p标签身上添加事件
+$("#box1 p").click(function(){
+    alert(1);
+})
+//删除 
+$("button").click(function(){
+    // let delp = $("#box1 p").remove();
+    let delp = $("#box1 p").detach();
+    console.log(delp);
+    delp.appendTo("#box2")
+
+})
+</script>

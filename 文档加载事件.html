@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="lib/jquery.js"></script>
+    <script>
+        // 文档加载完毕之后再获取元素
+        $(function(){
+            console.log($('.box'));
+        })
+    </script>
+</body>
+<div class="box">今天天气真不错</div>
+<script>
+    // jQuery的文档加载事件
+    // 执行时间：在html标签加载完毕之后执行
+    // 可以书写很多个
+    // 有简写
+    $(document).ready(function(){
+        console.log(1);
+    })
+    // 简写1
+    $().ready(function(){
+        console.log(2);
+    })
+    // 简写2
+    $(function(){
+        console.log(3);
+    })
+</script>
+</html>

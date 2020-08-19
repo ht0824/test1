@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">    </div>   
+
+     <script src="lib/jquery.js"></script>
+
+    <script>
+
+
+
+        // $(".box").on({
+
+        //     mouseenter: function () {
+        //         console.log("1");
+
+        //     },
+        //     mouseleave: function () {
+        //         console.log("2");
+
+        //     }
+        // })
+        // $(".box").mouseenter().mouseleave()
+        // 第一个参数表示mouseenter事件处理函数
+        // 第二个参数表示mouseleave事件处理函数
+        // $(".box").hover(function () {
+        //     console.log(1);
+        // }, function () {
+        //     console.log(2);
+        // })
+        //如果只传一个参数，表示移入和移入执行同样的函数。
+        $(".box").hover(function () {
+            console.log(1);
+        })
+    </script>
+</body>
+
+</html>

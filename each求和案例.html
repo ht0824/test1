@@ -1,0 +1,33 @@
+<button>计算总和</button>
+
+<p>10.11</p>
+<p>20.11</p>
+<p>30.55</p>
+<p>40.11</p>
+
+<script src="lib/jquery.js"></script>
+<script>
+/*
+需求：
+ 点击按钮，求p中的数据之和
+*/
+$("button").click(function(){
+//   let txt =  $("p").text();10.1120.1130.5540.11
+//   let txt =  $("p").html()只能获取第一个p中的内容.
+   let count = 0;
+  $('p').each(function(index,dom){
+      //index:表示索引 
+      //dom：表示原生js对象(标签)
+      //this:表示原生js对象(标签) this===dom
+    //   console.log(index,dom ,this);
+    // let txt = this.innerHTML
+    // let txt = $(this).html();
+    let txt = $(dom).html();
+    count = count + parseFloat(txt);    
+    
+})
+//得到结果
+console.log(count);
+  
+})
+</script>

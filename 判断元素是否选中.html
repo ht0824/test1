@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="sp1">xxx</span>
+    <span id="sp2">aaaaaa</span>
+    <span id="sp3">bbbbbb</span>
+    <span id="sp4">cccccc</span>
+    <span id="sp5">dddddd</span>
+
+
+    <!-- 引入jq -->
+    <script src="lib/jquery.js"></script>
+    <script>
+        // jQuery里面的选择器写错了    它不会报错
+        // 所以要用添加简单事件的方式 或者修改样式 来判断是否写对
+        //添加事件
+        $('#sp1').click(function(){
+            //弹窗提示就比较显眼
+            alert(1)
+        })
+        //修改样式
+        // 修改需要确认的选择器样式  比如颜色  也能比较显眼的判断是否选中
+        $('#sp2').css('backgroundColor','red')
+
+    </script>
+</body>
+</html>

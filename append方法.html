@@ -1,0 +1,34 @@
+<style>
+    div{
+        width: 320px;
+        border: 1px solid red;
+    }
+    </style>
+    <button id="btn">点我啊</button>
+        <div class="box">
+            <p>p1</p>
+            <p>p2</p>
+            <p>p3</p>
+    
+        </div>
+    <p class="outp">ppppppppppppp</p>
+    
+    <script src="lib/jquery.js"></script>
+    
+    <script>
+    /**
+     * 需求:
+     * 把外面的p标签添加到div中
+     * append()   --appendChild()
+     * appendTo()
+     * 这两个方法是移动元素
+     * */
+    $("#btn").click(function(){
+        // let $box = $(".box");
+        // $(".outp").appendTo( $(".box")  );
+        // $(".box").append( $(".outp"));
+        //所有的子元素之前添加元素
+        $(".box").prepend( $(".outp"));
+    })
+    </script>
+        

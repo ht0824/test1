@@ -1,0 +1,43 @@
+<style>
+    div{
+        width: 320px;
+        border: 1px solid red;
+    }
+    </style>
+    <button id="btn">点我啊</button>
+        <div class="box">
+            <p>p1</p>
+            <p>p2</p>
+            <p>p3</p>
+    
+        </div>
+    <p class="outp">ppppppppppppp</p>
+    
+    <script src="lib/jquery.js"></script>
+    
+    <script>
+    /**
+     * 需求:
+       新创建一个p标签 ，添加到box中
+       创建元素的语法: $('html代码') 
+     * */
+    $("#btn").click(function(){
+    //    let newp=$('.outp');
+    //对象调用方法
+    // let re = $('.outp').appendTo($(".box")) 
+    // console.log(re);
+    
+    // $('.outp').css("background","skyblue")
+    // $('.outp').prop("title","新的盒子")
+    // $('.outp').css("fontSize",20)
+    // re =$('.outp').appendTo($(".box"))
+      $('.outp').appendTo($(".box")).css("background","skyblue").prop("title","新的盒子")
+     .css("fontSize",20)
+     console.log(re);
+     
+    
+    
+       
+    })
+    </script>
+        

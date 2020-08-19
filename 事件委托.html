@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 500px;
+            border: 1px solid red;
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点我啊</button>
+    <div class="box">
+        <p class="pp">我是一个p啊</p>
+    </div>
+    <script src="lib/jquery.js"></script>
+    <script>
+        // $(".box p").click(function(){
+        //     alert("哈哈哈，点我干嘛？")
+        // })
+        //事件委托：
+        /**
+         * 解决的问题：可以让动态生成的元素具有事件。     * 
+           解决办法：
+           $('已存在的父辈选择器').on('事件类型', '新增的后代选择器',  '事件处理函数' ) === 推荐
+           注意点：
+        //    第二个参数，不能把关系 写完整，直接写后代元素选择器即可.
+        */
+        // $(".box").on( "click","p" ,function(){
+        //第二个参数，不能把关系 写完整，直接写后代元素选择器即可.
+        //以下这种写法不正确
+        //    $(".box").on( "click",".box > p" ,function(){
+            // 直接写后代元素选择器即可ok
+        $(".box").on("click", ".pp", function () {
+            alert("哈哈哈，点我干嘛？")
+        })
+        //点击按钮，新添加一个p标签到盒子中
+        $("button").click(function () {
+            $("<p class='pp'>我是一个新标签</p>").appendTo(".box");
+        })
+    </script>
+</body>
+
+</html>

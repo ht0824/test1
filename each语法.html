@@ -1,0 +1,24 @@
+<script src="lib/jquery.js"></script>
+<script>
+/* $.each(jq对象/数组, function ( index, dom){ })
+*/
+
+let  arr = ["haha","xixi","hehe"];
+//index:索引
+//dom:数组中的每个元素
+$.each(arr ,function(index,dom ){
+     console.log(index,dom);     
+})
+
+/**
+ * jQuery对象/数组.each(function(index,value){})
+ * 
+*/
+console.log("-------------------------------");
+//把数组转为jQuery对象
+$(arr).each(function(index,dom){
+    console.log(index,dom);    
+    
+})
+
+</script>

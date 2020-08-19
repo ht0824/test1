@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 400px;
+
+        }
+
+        select {
+            width: 100px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+1.//点击——>把左边选中的选项添加到右边
+//点击===>把左边全部的选项添加到右边		
+//点击<——把右边选中的选项添加到左边
+//点击<===把右边全部的选项添加到左边--
+//双击左边或者右边的选项让它自动移动到另外一端
+
+     -->
+    <div>
+
+        <button id="btn1">左边选中的选项添加到右边</button>
+        <button id="btn2">把左边全部的选项添加到右边</button>
+        <button id="btn3">把右边选中的选项添加到左边</button>
+        <button id="btn4">把右边全部的选项添加到左边</button>
+    </div>
+    <!-- 
+        multiple：多选 
+        size:显示的option标签的数量
+     -->
+    <select name="" id="left" multiple size="3">
+        <option value="">苹果1</option>
+        <option value="">苹果2</option>
+        <option value="">苹果3</option>
+        <option value="">苹果4</option>
+        <option value="">苹果5</option>
+    </select>
+
+    <select name="" id="right" multiple>
+
+    </select>
+
+    <script src="lib/jquery.js"></script>
+    <script>
+        //1 点击——>把左边选中的选项添加到右边
+        $("#btn1").click(function () {
+            $("#left option:selected").appendTo("#right")
+        })
+        //2点击===>把左边全部的选项添加到右边
+        $("#btn2").click(function () {
+            $("#left option").appendTo("#right")
+        })
+
+        //3点击<——把右边选中的选项添加到左边
+        $("#btn3").click(function () {
+            $("#right option:selected").appendTo("#left")
+        })
+        //4点击<===把右边全部的选项添加到左边--
+
+        $("#btn4").click(function () {
+            $("#right option").appendTo("#left")
+        })
+        //5双击左边或者右边的选项让它自动移动到另外一端
+        // $("#left option").dblclick(function () {
+        //     $(this).appendTo("#right") 
+        // })
+        // // 
+        // $('已存在的父辈选择器').on('事件类型', '新增的后代选择器',  '事件处理函数' ) === 推荐
+        $("#right").on("dblclick","option",function(){
+            // console.log( this);            
+            $(this).appendTo('#left'); 
+        })
+        
+              
+    </script>
+</body>
+
+</html>

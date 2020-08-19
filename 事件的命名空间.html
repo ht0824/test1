@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            ;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+
+    <script src="lib/jquery.js"></script>
+    <script>
+       
+    $(".box").on({
+        // 事件名.别名 这种写法称为事件的命名空间
+        'click.a':function(){
+            console.log(1);
+            
+        },
+        'click.b':function(){
+            console.log(2);
+            
+        },
+        mouseenter:function(){
+            console.log("mouseenter事件触发了!");
+            
+        },
+        mouseleave:function(){
+            console.log("mouseleave事件触发了!");
+            
+        }
+    })
+    </script>
+</body>
+</html>

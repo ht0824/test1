@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .box{
+        width: 100px;
+        height: 100px;
+        background-color: greenyellow;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">哈 哈 哈</div>
+
+    <script src="lib/jquery.js"></script>
+    <script>
+     //获取 
+     //jq对象.css( 属性名  )
+    //  console.log(  $(".box").css("width")   );//100px
+    //  console.log(  $(".box").css("background-color")   );//rgb(173, 255, 47)
+     //设置
+      /*
+      单个
+      jq对象.css( 属性名,值  )
+      */
+    //  $(".box").css("width","250px");
+    //  $(".box").css("height","250px");
+    /**
+     * 设置多个
+     *  jq对象.css({ 属性名:值 , 属性名:值 }   )
+    */
+    // $(".box").css({
+    //     "width":"250px",
+    //     "height":"250px",
+    //     "background-color":"skyblue" 
+     
+    // });
+    // $(".box").css({
+    //     width:"250px",
+    //     height:"250px",
+    //     backgroundColor:"skyblue" ,
+    //     fontSize:"30px"
+    // });
+    $(".box").css({
+        width:250,
+        height:250,
+        backgroundColor:'skyblue',
+        fontSize:30
+    });
+    </script>
+</body>
+</html>

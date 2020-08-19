@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>h2标题</h2>
+    <h2 class="sp">h2标题</h2>
+    <p>p0</p>
+    <div class="box">
+        <p>p1</p>
+        <p>p2</p>
+        <p>p3</p>
+        <div>
+            <p>p4</p>
+            <p>p5</p>
+        </div>
+
+    </div>
+    <p>p6</p>
+    <span>span1</span>
+    <p>p7</p>
+    <span class="sp">span2</span>
+
+    <span>span3</span>
+    <p>p8</p>
+    <!--1 引入jQuery文件 -->
+    <script src="lib/jquery.js"></script>
+    <script>
+        // 1.相邻兄弟选择器
+        // 选中经挨着自己后面的指定的兄弟标签
+        $('.box + p').css('color','blue');
+        // 2.选中经挨着自己的后面的 所有指定 的兄弟标签
+        $('.box ~ p').css('backgroundColor','yellow');
+        // 3.选中任意兄弟  siblings()
+        $('box').siblings().css('fontSize',30);
+        // 4.选中自己所有的 h2 标签兄弟
+        $('.box').siblings('h2').css('color','violet')
+        // 5.选中自己  带有类名为 sp的兄弟
+        $('.box').siblings('.sp').css('backgroundColor','skyblue')
+    </script>
+</body>
+
+</html>

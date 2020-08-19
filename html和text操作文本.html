@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <button>获取</button>
+    <button>设置</button>
+    <div>
+        普通文本<p>段落文本</p>
+    </div>
+</body>
+<script src="lib/jquery.js"></script>
+<script>
+    // 操作普通文本         innerText
+    // 获取  jQuery对象 .text()
+    // 设置  jQuery对象.text(内容)
+
+    //获取 
+    // $("button:first-child").click(function () {
+    //     console.log($("div").text());//只取字，不取标签 普通文本   段落文本
+
+    // })
+    // //设置
+    // $("button:nth-child(2)").click(function () {
+    //     // $("div").text("哈哈哈")
+    //     $("div").text("<h1>哈哈哈</h1>") //浏览器不会解析标签
+    // })
+    /*
+
+    
+     2 操作html文本              --innerHTML
+       获取 jQuery对象.html()
+       设置 jQuery对象.html(内容)
+    */
+    //获取 
+    $("button:first-child").click(function () {
+        console.log($("div").html());//普通文本<p>段落文本</p>
+    })
+    //设置
+    $("button:nth-child(2)").click(function () {       
+        $("div").html("<h1>哈哈哈</h1>") //浏览器会解析标签
+    })
+
+</script>
+</html>

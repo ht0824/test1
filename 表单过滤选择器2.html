@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="radio" name="newsletter" checked="checked" value="Daily" />
+        <input type="checkbox" name="newsletter" value="Weekly" />
+        <input type="checkbox" name="newsletter" checked="checked" value="Monthly" />
+        <select>
+            <option value="1">Flowers</option>
+            <option value="2" selected="selected">Gardens</option>
+            <option value="3">Trees</option>
+          </select>
+      </form>
+
+      <script src="/lib/jquery.js"></script>
+      <script>
+          //匹配所有选中的被选中元素(复选框、单选框等)，
+          console.log(  $(":checked")  );
+        //   对于select元素来说，获取选中推荐使用 :selected
+          console.log( $(":selected") );
+          
+      </script>
+</body>
+</html>

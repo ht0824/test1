@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box1" title="原生对象">xxx</div>
+    <div id="box2" title="jQuery对象">yyy</div>
+    <!-- 引入jQuery文件 -->
+    <script src="lib/jquery.js"></script>
+    <script>
+        let box2 = document.getElementById('box2');
+        // jQuery对象在书写时 都会加上 $  前缀
+        let $box2 = $('#box2');
+        console.log($box2);
+        
+        //使用jq对象访问原生对象的属性
+        // console.log(  $box2.title);// 会得到undefined
+
+        //把  jq 对象转为原生对象   jq对象.get(0)  或者  jq对象[0];
+        console.log($box2.get(0).title);
+        console.log($box2[0].title);
+    </script>
+</body>
+</html>

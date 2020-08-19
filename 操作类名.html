@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+    p{
+        background-color: skyblue;
+    }
+    </style>
+</head>
+<body>
+    <p class="red">第1个节点</p>
+    <p>第2个节点</p>
+    <p>第3个节点</p>
+    <p>第4个节点</p>
+    <p>第5个节点</p>
+
+<script src="lib/jquery.js"></script>
+<script>
+/*
+ 
+   点击所有p标签，判断当前点击的标签是否含有类名red，有就删除，没有就添加
+      
+*/ 
+$("p").click(function(){ 
+    // alert(1)
+    //获取class属性的值
+   let cl= $(this).prop("class")
+//    console.log(cl);
+// 有类名red，有就删除
+if(cl==="red"){
+    // $(this).prop("class","")
+    // $(this).removeClass("red");
+    $(this).removeClass();
+}else{
+    // $(this).prop("class","red")
+    $(this).addClass("red")
+}
+   
+})
+
+</script>
+</body>
+</html>

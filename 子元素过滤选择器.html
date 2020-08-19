@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <span>span</span>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <span>span</span>
+    </div>
+    <div>
+        <p>11</p>
+        <p>22</p>
+        <p>33</p>
+        <p>44</p>
+        <span>span</span>
+
+    </div>
+    <!-- 引入jQuery -->
+    <script src="lib/jquery.js"></script>
+    <script>
+    /**
+     * 基本过滤选择器:对选择元素在父元素中的顺序没有要求
+     * 从集合中筛选出需要的标签 
+
+     * 从所有的div中的p组成的集合中选中第一个p
+        // $("div p:first").css("background","skyblue")
+
+     * 子元素过滤选择器
+       对选择元素在父元素中的顺序有要求
+     * */ 
+
+    //选择中每个div中的p组成的集合中的第一个p标签，
+    //这个p标签必须要是第一个子元素
+    // $("div p:first-child").css("background","skyblue")
+
+    //选择中每个div中的p组成的集合中的最后一个p标签，
+    //这个p标签必须要是最后一个子元素
+    // $("div p:last-child").css("background","orange")
+
+    // 选择中偶数个 顺序从1开始
+    //  $("div p:nth-child(even)").css("background","orange")
+
+    // 选择中奇数个 顺序从1开始
+    //  $("div p:nth-child(odd)").css("background","skyblue")
+
+    // 选择中偶数个 顺序从1开始
+    //  $("div p:nth-child(2n)").css("background","skyblue")
+
+    //  选择中奇数个 n从0开始
+    //  $("div p:nth-child(2n+1)").css("background","orange")
+
+    // n从0开始
+    //  $("div p:nth-child(3n+1)").css("background","orange")
+
+    //选择中每个div中的p组成的集合中的最后一个类型为p的子元素
+    //与p是否是第一个元素没有关系
+    // $("div p:last-of-type").css("background","orange")
+    $("div p:first-of-type").css("background","skyblue")
+
+    </script>
+</body>
+</html>
